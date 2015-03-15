@@ -1,0 +1,28 @@
+Monad Autograder
+Testing lab_huffman at 2012-10-29 01:16:57
+
+"The most likely way for the world to be destroyed, most experts agree, is by accident. That's where we come in; we're computer professionals. We cause accidents." ~ Nathaniel Borenstein
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_encoder_binary_4  . . . . . . [20 pts] - FAILED
+test_encoder_binary_8  . . . . . . [20 pts] - FAILED
+test_encoder_valgrind_2 (valgrind) [6 pts]  - FAILED
+test_encoder_writetree_4 . . . . . [2 pts]  - FAILED
+test_encoder_writetree_8 . . . . . [2 pts]  - FAILED
+test_decode_4  . . . . . . . . . . [20 pts] - FAILED
+test_decode_8  . . . . . . . . . . [20 pts] - FAILED
+test_decode_readtree_4 . . . . . . [2 pts]  - FAILED
+test_decode_readtree_8 . . . . . . [2 pts]  - FAILED
+test_the_works (valgrind)  . . . . [6 pts]  - FAILED
+
+
+Total score...
+================================================================
+TOTAL SCORE: 0
+

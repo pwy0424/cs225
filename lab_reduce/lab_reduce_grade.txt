@@ -1,0 +1,23 @@
+Monad Autograder
+Testing lab_reduce at 2012-11-12 01:39:30
+
+"If you just rely on one model, you tend to amputate reality to make it fit your model." ~ David Brooks
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+findmin_minimum_correctness . . . . [20 pts] - passed
+findmin_minimum_parallel_concurrent [15 pts] - passed
+num_selected_correctness  . . . . . [15 pts] - FAILED
+num_selected_concurrency  . . . . . [10 pts] - passed
+frequency_parallel_correctness  . . [40 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 85
+

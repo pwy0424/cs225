@@ -1,0 +1,7 @@
+Monad Autograder
+Testing lab_graphs at 2012-12-10 12:48:16
+
+"Should array indices start at 0 or 1? My compromise of 0.5 was rejected without, I thought, proper consideration." ~ Stan Kelly-Bootle
+
+Setting up test environment...
+Error: /dev/shm/massung1/monad/fa12-cs225/pan30/lab_graphs/dsets.h does not exist.

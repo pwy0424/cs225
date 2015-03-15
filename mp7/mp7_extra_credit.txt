@@ -1,0 +1,23 @@
+Monad Autograder
+Testing mp7.1 at 2012-12-05 10:52:11
+
+"I've seen many balls. Actually, let's do an example without balls." ~ Jack Toole
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+addElements1 . . . . [20 pts] - passed
+addElements2 . . . . [20 pts] - passed
+testFindAndSetUnion1 [20 pts] - passed
+testFindAndSetUnion2 [20 pts] - FAILED
+testFindAndSetUnion3 [20 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 80
+

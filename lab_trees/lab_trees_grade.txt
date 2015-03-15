@@ -1,0 +1,22 @@
+Monad Autograder
+Testing lab_trees at 2012-10-22 09:56:45
+
+"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away." ~ Antoine de Saint-Exupery
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_isOrdered  . [40 pts] - passed
+test_mirror . . . [30 pts] - passed
+test_printPaths . [30 pts] - passed
+test_sumDistances [25 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 125
+

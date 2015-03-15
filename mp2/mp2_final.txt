@@ -1,0 +1,240 @@
+Monad Autograder
+Testing mp2 at 2012-09-19 12:08:13
+
+"@return A voidean value indicating whether the test was successful." ~ lab_avl
+
+Setting up test environment...
+Compiling...
+================================================================
+make: warning: undefined variable `CXXFLAGS'
+make: warning: undefined variable `CPPFLAGS'
+make: warning: undefined variable `TARGET_ARCH'
+
+
+Running tests...
+================================================================
+InvertColorsEven . . . . . . . . . . . [8 pts] - passed
+FlipLeftEven . . . . . . . . . . . . . [5 pts] - passed
+FlipLeftOdd  . . . . . . . . . . . . . [5 pts] - passed
+AdjustBrightnessEven . . . . . . . . . [6 pts] - passed
+AdjustBrightnessEven2  . . . . . . . . [3 pts] - passed
+AdjustBrightnessEven3  . . . . . . . . [3 pts] - passed
+Valgrind1 (valgrind) . . . . . . . . . [5 pts] - passed
+AddPictureValidIndex . . . . . . . . . [3 pts] - passed
+AddPictureInvalidIndex . . . . . . . . [2 pts] - passed
+ImageAssignmentOperator  . . . . . . . [2 pts] - passed
+SceneGetPictureInvalidIndex  . . . . . [2 pts] - passed
+SceneChangeMaxLayersLarger . . . . . . [3 pts] - FAILED: Segmentation fault
+SceneChangeMaxLayersSmaller (valgrind) [1 pts] - FAILED: ==24023==    by 0x40BF11: proxy::test_execution::child_test() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40B930: 
+SceneChangeMaxLayersInvalidChange  . . [2 pts] - passed
+SceneCopyCtor  . . . . . . . . . . . . [3 pts] - passed
+SceneCopyCtor2 . . . . . . . . . . . . [2 pts] - passed
+SceneAssignmentOperator  . . . . . . . [3 pts] - passed
+SceneAssignmentOperator2 . . . . . . . [2 pts] - passed
+SceneChangeLayer . . . . . . . . . . . [3 pts] - passed
+SceneChangeLayerInvalid  . . . . . . . [2 pts] - passed
+SceneDrawScene . . . . . . . . . . . . [3 pts] - passed
+SceneDrawScene2  . . . . . . . . . . . [3 pts] - passed
+SceneDrawScene3  . . . . . . . . . . . [3 pts] - passed
+SceneDrawScene4  . . . . . . . . . . . [3 pts] - passed
+SceneDrawSceneChangeLayer  . . . . . . [2 pts] - passed
+SceneDrawSceneDeletePicture  . . . . . [2 pts] - passed
+SceneDrawSceneTranslate  . . . . . . . [2 pts] - passed
+SceneDrawSceneTranslate2 . . . . . . . [2 pts] - passed
+SceneTranslateInvalid  . . . . . . . . [2 pts] - passed
+SceneTranslateInvalid2 . . . . . . . . [1 pts] - passed
+SceneDeletePictureInvalid  . . . . . . [2 pts] - passed
+Valgrind2 (valgrind) . . . . . . . . . [5 pts] - passed
+Valgrind3 (valgrind) . . . . . . . . . [5 pts] - FAILED: ==24055==    by 0x40B930: proxy::test_execution::child() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x415004: int proxy::fork_ex
+
+
+Total score...
+================================================================
+TOTAL SCORE: 91
+
+
+
+Detailed test output...
+================================================================
+----------------------------------------------------------------
+SceneChangeMaxLayersLarger [3 points]
+Result: FAILED: Segmentation fault
+Took 32567856ms (2000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+SceneChangeMaxLayersSmaller (run under valgrind) [1 points]
+Result: FAILED: ==24023==    by 0x40BF11: proxy::test_execution::child_test() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40B930: 
+Took unknown time (2000ms timeout)
+Output:
+----------------------------------------------------------------
+Running SceneChangeMaxLayersSmaller [worth 1 points, output below]
+==24023== Invalid write of size 8
+==24023==    at 0x421BB0: Scene::changemaxlayers(int) (scene.cpp:110)
+==24023==    by 0x406013: proxy_test::SceneChangeMaxLayersSmaller(util::sizedpipestream<512ul>&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x412F89: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40BF11: proxy::test_execution::child_test() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40B930: proxy::test_execution::child() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x415004: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40BD95: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40AC1A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40AB22: proxy::RunTests::run_single_test(char const*) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40A98A: proxy::RunTests::execute_by_mode() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40A93B: proxy::RunTests::execute() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40A0D7: main (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==  Address 0x4c838c8 is 0 bytes after a block of size 8 alloc'd
+==24023==    at 0x4A0674C: operator new[](unsigned long) (vg_replace_malloc.c:305)
+==24023==    by 0x421B53: Scene::changemaxlayers(int) (scene.cpp:105)
+==24023==    by 0x406013: proxy_test::SceneChangeMaxLayersSmaller(util::sizedpipestream<512ul>&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x412F89: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40BF11: proxy::test_execution::child_test() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40B930: proxy::test_execution::child() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x415004: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40BD95: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40AC1A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40AB22: proxy::RunTests::run_single_test(char const*) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40A98A: proxy::RunTests::execute_by_mode() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40A93B: proxy::RunTests::execute() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023== 
+==24023== Invalid write of size 4
+==24023==    at 0x421BD7: Scene::changemaxlayers(int) (scene.cpp:111)
+==24023==    by 0x406013: proxy_test::SceneChangeMaxLayersSmaller(util::sizedpipestream<512ul>&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x412F89: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40BF11: proxy::test_execution::child_test() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40B930: proxy::test_execution::child() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x415004: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40BD95: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40AC1A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40AB22: proxy::RunTests::run_single_test(char const*) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40A98A: proxy::RunTests::execute_by_mode() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40A93B: proxy::RunTests::execute() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40A0D7: main (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==  Address 0x4c83914 is 0 bytes after a block of size 4 alloc'd
+==24023==    at 0x4A0674C: operator new[](unsigned long) (vg_replace_malloc.c:305)
+==24023==    by 0x421B68: Scene::changemaxlayers(int) (scene.cpp:106)
+==24023==    by 0x406013: proxy_test::SceneChangeMaxLayersSmaller(util::sizedpipestream<512ul>&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x412F89: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40BF11: proxy::test_execution::child_test() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40B930: proxy::test_execution::child() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x415004: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40BD95: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40AC1A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40AB22: proxy::RunTests::run_single_test(char const*) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40A98A: proxy::RunTests::execute_by_mode() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40A93B: proxy::RunTests::execute() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023== 
+==24023== Invalid write of size 4
+==24023==    at 0x421BFD: Scene::changemaxlayers(int) (scene.cpp:112)
+==24023==    by 0x406013: proxy_test::SceneChangeMaxLayersSmaller(util::sizedpipestream<512ul>&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x412F89: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40BF11: proxy::test_execution::child_test() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40B930: proxy::test_execution::child() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x415004: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40BD95: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40AC1A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40AB22: proxy::RunTests::run_single_test(char const*) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40A98A: proxy::RunTests::execute_by_mode() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40A93B: proxy::RunTests::execute() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40A0D7: main (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==  Address 0x4c83964 is 0 bytes after a block of size 4 alloc'd
+==24023==    at 0x4A0674C: operator new[](unsigned long) (vg_replace_malloc.c:305)
+==24023==    by 0x421B7D: Scene::changemaxlayers(int) (scene.cpp:107)
+==24023==    by 0x406013: proxy_test::SceneChangeMaxLayersSmaller(util::sizedpipestream<512ul>&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x412F89: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40BF11: proxy::test_execution::child_test() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24023==    by 0x40B930: p
+
+----------------------------------------------------------------
+Valgrind3 (run under valgrind) [5 points]
+Result: FAILED: ==24055==    by 0x40B930: proxy::test_execution::child() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x415004: int proxy::fork_ex
+Took unknown time (10000ms timeout)
+Output:
+----------------------------------------------------------------
+Running Valgrind3 [worth 5 points, output below]
+==24055== Mismatched free() / delete / delete []
+==24055==    at 0x4A0545F: operator delete(void*) (vg_replace_malloc.c:387)
+==24055==    by 0x421C2F: Scene::changemaxlayers(int) (scene.cpp:115)
+==24055==    by 0x408BD6: proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x412F89: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40BF11: proxy::test_execution::child_test() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40B930: proxy::test_execution::child() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x415004: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40BD95: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40AC1A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40AB22: proxy::RunTests::run_single_test(char const*) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40A98A: proxy::RunTests::execute_by_mode() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40A93B: proxy::RunTests::execute() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==  Address 0x4c837b0 is 0 bytes inside a block of size 16 alloc'd
+==24055==    at 0x4A0674C: operator new[](unsigned long) (vg_replace_malloc.c:305)
+==24055==    by 0x4216A7: Scene::Scene(int) (scene.cpp:8)
+==24055==    by 0x408B06: proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x412F89: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40BF11: proxy::test_execution::child_test() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40B930: proxy::test_execution::child() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x415004: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40BD95: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40AC1A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40AB22: proxy::RunTests::run_single_test(char const*) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40A98A: proxy::RunTests::execute_by_mode() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40A93B: proxy::RunTests::execute() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055== 
+==24055== Mismatched free() / delete / delete []
+==24055==    at 0x4A0545F: operator delete(void*) (vg_replace_malloc.c:387)
+==24055==    by 0x421C3F: Scene::changemaxlayers(int) (scene.cpp:116)
+==24055==    by 0x408BD6: proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x412F89: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40BF11: proxy::test_execution::child_test() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40B930: proxy::test_execution::child() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x415004: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40BD95: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40AC1A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40AB22: proxy::RunTests::run_single_test(char const*) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40A98A: proxy::RunTests::execute_by_mode() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40A93B: proxy::RunTests::execute() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==  Address 0x4c83800 is 0 bytes inside a block of size 8 alloc'd
+==24055==    at 0x4A0674C: operator new[](unsigned long) (vg_replace_malloc.c:305)
+==24055==    by 0x4216C3: Scene::Scene(int) (scene.cpp:9)
+==24055==    by 0x408B06: proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x412F89: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40BF11: proxy::test_execution::child_test() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40B930: proxy::test_execution::child() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x415004: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40BD95: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40AC1A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40AB22: proxy::RunTests::run_single_test(char const*) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40A98A: proxy::RunTests::execute_by_mode() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40A93B: proxy::RunTests::execute() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055== 
+==24055== Mismatched free() / delete / delete []
+==24055==    at 0x4A0545F: operator delete(void*) (vg_replace_malloc.c:387)
+==24055==    by 0x421C4F: Scene::changemaxlayers(int) (scene.cpp:117)
+==24055==    by 0x408BD6: proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x412F89: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40BF11: proxy::test_execution::child_test() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40B930: proxy::test_execution::child() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x415004: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40BD95: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40AC1A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40AB22: proxy::RunTests::run_single_test(char const*) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40A98A: proxy::RunTests::execute_by_mode() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40A93B: proxy::RunTests::execute() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==  Address 0x4c83850 is 0 bytes inside a block of size 8 alloc'd
+==24055==    at 0x4A0674C: operator new[](unsigned long) (vg_replace_malloc.c:305)
+==24055==    by 0x4216DF: Scene::Scene(int) (scene.cpp:10)
+==24055==    by 0x408B06: proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x412F89: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40BF11: proxy::test_execution::child_test() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x40B930: proxy::test_execution::child() (in /dev/shm/massung1/monad/mp2_grade/testscene)
+==24055==    by 0x415004: int proxy::fork_exe
+
+
+----------------------------------------------------------------
+Total score...
+================================================================
+TOTAL SCORE: 91
+

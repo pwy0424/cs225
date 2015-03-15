@@ -1,0 +1,29 @@
+Monad Autograder
+Testing lab_race at 2012-10-08 23:06:10
+
+"The most likely way for the world to be destroyed, most experts agree, is by accident. That's where we come in; we're computer professionals. We cause accidents." ~ Nathaniel Borenstein
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+table_correctness . . . . . . . [10 pts] - passed
+table_parallelism . . . . . . . [13 pts] - passed
+flipper_correctness . . . . . . [10 pts] - passed
+flipper_parallelism . . . . . . [13 pts] - passed
+shifter_correctness . . . . . . [10 pts] - passed
+shifter_parallelism . . . . . . [13 pts] - passed
+collage_layers_correctness  . . [5 pts]  - passed
+collage_layers_parallelism  . . [7 pts]  - passed
+collage_coordinates_serial  . . [5 pts]  - passed
+collage_coordinates_parallelism [7 pts]  - passed
+collage_coordinates_correctness [7 pts]  - FAILED
+
+
+Total score...
+================================================================
+TOTAL SCORE: 93
+

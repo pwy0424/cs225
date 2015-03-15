@@ -1,0 +1,23 @@
+Monad Autograder
+Testing lab_debug at 2012-09-10 13:23:42
+
+"The most exciting phrase to hear in science - the one that heralds new discoveries - is not 'Eureka!' but 'That's funny....'" ~ Isaac Asimov
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+no_segfaults . . . [20 pts] - FAILED
+produces_out_png . [10 pts] - FAILED
+similar_sketch . . [30 pts] - FAILED
+complete_in_01_bmp [20 pts] - FAILED
+complete_in_02_bmp [20 pts] - FAILED
+
+
+Total score...
+================================================================
+TOTAL SCORE: 0
+
